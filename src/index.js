@@ -10,13 +10,17 @@ function weather(response) {
     response.data.wind.speed
   );
   document.querySelector(".weather").innerHTML = response.data.weather[0].main;
+
+  iconElement.innerHTML = `http://openweathermap.or  let iconElement = document.querySelector("#icon");g/img/wn/${response.data.weather[0].icon}@2x.png`;
 }
 
 function search(event) {
   event.preventDefault();
+
   let city = document.querySelector("#search-text-input").value;
   let apiUrlSearchEndpoint = "https://api.openweathermap.org/data/2.5/weather";
   let units = "imperial";
+  let iconElement = document.querySelector("#icon");
   let apiUrlSearch = `${apiUrlSearchEndpoint}?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrlSearch).then(weather);
 }
