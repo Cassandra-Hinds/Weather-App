@@ -27,6 +27,9 @@ button:hover {
   background-color: rgb(13, 108, 252);
   box-shadow: 1px 1px 6px rgb(54, 54, 54);
 }
+a {
+  font-weight: bold;
+}
 #current-location {
   padding: 12px 37px;
 }
@@ -64,10 +67,12 @@ button:hover {
   margin-bottom: 100px;
 }
 
-.fahren {
+.fahren,
+.cels {
   font-size: 20px;
   margin-bottom: 60px;
 }
+
 .humidity,
 .wind {
   color: #430f58;
@@ -119,4 +124,10 @@ button:hover {
   font-size: 25px;
   font-style: italic;
   margin-left: 15px;
+}
+
+.credit {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
 }
