@@ -71,6 +71,8 @@ a {
 .cels {
   font-size: 20px;
   margin-bottom: 60px;
+  position: relative;
+  top: -20px;
 }
 
 .humidity,

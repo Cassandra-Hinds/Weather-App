@@ -52,21 +52,28 @@
       </form>
       <button id="current-location">Current Location</button>
 
-      <div class="city">New York</div>
+      <div class="city"></div>
       <div class="day-and-time">Friday 3:52 P.M.</div>
-      <div class="weather">Sunny</div>
+      <div class="weather"></div>
 
-      <div class="current-temperature">
-        <img src="http://openweathermap.org/img/wn/10d@2x.png" />
-        <span id="temperature">70</span><span class="fahren"> °F </span
-        ><span class="cels">| °C</span>
+      <div class="clearfix current-temperature">
+        <img
+          src="http://openweathermap.org/img/wn/10d@2x.png"
+          id="icon"
+          class="float-left"
+        />
+        <span class="float-left">
+          <span id="temperature"></span
+          ><span class="fahren"> <a href="#" id="fahren-link">°F </a></span
+          ><span class="cels">| <a href="#" id="cels-link">°C</a></span>
+        </span>
       </div>
       <div class="humidity">
         <i class="fas fa-temperature-high humidity-icon"></i> Humidity:
-        <span id="humidity">50</span>%
+        <span id="humidity"></span>%
       </div>
       <div class="wind">
-        <i class="fas fa-wind wind-icon"></i>Wind: <span id="wind">4</span> km/h
+        <i class="fas fa-wind wind-icon"></i>Wind: <span id="wind"></span> km/h
       </div>
       <div class="border border border-primary border border border-3">
         <div class="row">
