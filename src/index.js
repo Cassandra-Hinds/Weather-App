@@ -77,11 +77,19 @@ function currentTime() {
   return `Lasted updated: ${day} ${hours}:${minutes}`;
 }
 
-function celsTemp(event) {
+function celsTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  let celsTemp = ((fahrenTemp - 32) * 5) / 9;
-  temperatureElement.innerHTML = Math.round(celsTemp);
+  let celsTemperature = ((fahrenTemp - 32) * 5) / 9;
+  temperatureElement.innerHTML = Math.round(celsTemperature);
+}
+
+function fahrenTemperature(event) {
+  event.preventDefault();
+
+  let temperatureElement = document.querySelector("#temperature");
+
+  temperatureElement.innerHTML = Math.round(fahrenTemp);
 }
 
 let time = document.querySelector(".day-and-time");
@@ -92,4 +100,8 @@ let fahrenTemp = null;
 
 let celsLink = document.querySelector("#cels-link");
 
-celsLink.addEventListener("click", celsTemp);
+celsLink.addEventListener("click", celsTemperature);
+
+let fahrenLink = document.querySelector("#fahren-link");
+
+fahrenLink.addEventListener("click", fahrenTemperature);

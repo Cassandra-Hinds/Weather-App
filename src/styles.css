@@ -74,11 +74,14 @@ a {
   position: relative;
   top: -20px;
 }
-
+a .active {
+  color: #27296d;
+}
 #fahren-link,
 #cels-link {
   text-decoration: none;
 }
+
 .humidity,
 .wind {
   color: #430f58;
