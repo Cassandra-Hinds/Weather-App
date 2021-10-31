@@ -9,10 +9,14 @@ function weather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+
   document.querySelector(".weather").innerHTML = response.data.weather[0].main;
-  document.querySelector(
-    "#icon"
-  ).innerHTML = `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 function search(event) {
@@ -70,7 +74,7 @@ function currentTime() {
     minutes = `0${minutes}`;
   }
 
-  return `${day} ${hours}:${minutes}`;
+  return `Lasted updated: ${day} ${hours}:${minutes}`;
 }
 
 function celsTemp(event) {

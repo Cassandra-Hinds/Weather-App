@@ -75,6 +75,10 @@ a {
   top: -20px;
 }
 
+#fahren-link,
+#cels-link {
+  text-decoration: none;
+}
 .humidity,
 .wind {
   color: #430f58;
