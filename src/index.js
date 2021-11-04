@@ -91,7 +91,26 @@ function fahrenTemperature(event) {
 
   temperatureElement.innerHTML = Math.round(fahrenTemp);
 }
+function forecast() {
+  let forecastElement = document.querySelector("#forecast");
 
+  forecastElement.innerHTML = `<div class="row">
+          <div class="col future-days">Sati</div>
+        </div>
+
+        <div class="row">
+          <div class="col"><i class="fas fa-sun future-icon"></i></div>
+        </div>
+
+        <div class="row">
+          <div class="col future-temperatures">
+            73° <span class="min-temp">72°</span>
+          </div>
+        </div>
+      </div>`;
+}
+
+forecast();
 let time = document.querySelector(".day-and-time");
 
 time.innerHTML = currentTime(now);

@@ -137,7 +137,9 @@ a .active {
   font-style: italic;
   margin-left: 20px;
 }
-
+.min-temp {
+  opacity: 80%;
+}
 .credit {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
