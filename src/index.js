@@ -95,7 +95,7 @@ function forecast() {
   let forecastElement = document.querySelector("#forecast");
 
   forecastElement.innerHTML = `<div class="row">
-          <div class="col future-days">Sati</div>
+          <div class="col future-days">Sat</div>
         </div>
 
         <div class="row">
