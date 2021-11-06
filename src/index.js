@@ -94,39 +94,26 @@ function fahrenTemperature(event) {
 function forecast() {
   let forecastElement = document.querySelector("#forecast");
   let forecastHtml = `<div class="row">`;
-  forecastHtml =
-    forecastHtml +
-    `
-          <div class="col future-days">Sat</div>
-        </div>
+  let days = ["Sat", "Sun", "Mon", "Tue", "Wed"];
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+          <div class="col-2">
+          <div class ="future-days">${day}</div>
+       
 
-        <div class="row">
-          <div class="col"><i class="fas fa-sun future-icon"></i></div>
-        </div>
+          <div><i class="fas fa-sun future-icon"></i></div>
+       
 
-        <div class="row">
-          <div class="col future-temperatures">
+        
+          <div class= "future-temperatures">
             73° <span class="min-temp">72°</span>
           </div>
         </div>
      `;
-  forecastHtml =
-    forecastHtml +
-    `
-        <div class="row">
-          <div class="col future-days">Sat</div>
-        </div>
+  });
 
-        <div class="row">
-          <div class="col"><i class="fas fa-sun future-icon"></i></div>
-        </div>
-
-        <div class="row">
-          <div class="col future-temperatures">
-            73° <span class="min-temp">72°</span>
-          </div>
-        </div>
-    `;
   forecastHtml = forecastHtml + `</div>`;
   forecastElement.innerHTML = forecastHtml;
 }

@@ -107,8 +107,11 @@ a .active {
   background-color: transparent;
   border-radius: 20px;
   padding: 50px;
-  padding-left: 50px;
+  padding-left: 65px;
+
+  margin: 0 auto;
   margin-bottom: 50px;
+  max-width: 720px;
   transition: all ease-in-out 200ms;
 }
 .border:hover {
