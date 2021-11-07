@@ -106,7 +106,7 @@ a .active {
   padding-left: 65px;
 
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   max-width: 720px;
   transition: all ease-in-out 200ms;
 }

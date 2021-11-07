@@ -77,12 +77,14 @@ function currentTime() {
   let hours = now.getHours();
 
   let minutes = now.getMinutes();
+  let ampm = hours >= 12 ? "pm" : "am";
+  hours = hours % 12;
 
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
 
-  return `Lasted updated: ${day} ${hours}:${minutes}`;
+  return `Lasted updated: ${day} ${hours}:${minutes}${ampm}`;
 }
 
 function formatDay(timestamp) {
