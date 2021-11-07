@@ -99,28 +99,44 @@ function fahrenTemperature(event) {
 
   temperatureElement.innerHTML = Math.round(fahrenTemp);
 }
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
 function showForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHtml = `<div class="row">`;
-  let days = ["Sat", "Sun", "Mon", "Tue", "Wed"];
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6 && index >= 1) {
+      forecastHtml =
+        forecastHtml +
+        `
           <div class="col-2">
-          <div class ="future-days">${day}</div>
+          <div class ="future-days">${formatDay(forecastDay.dt)}</div>
        
 
-          <div><i class="fas fa-sun future-icon"></i></div>
+            <img src = "http://openweathermap.org/img/wn/${
+              forecastDay.weather[0].icon
+            }@2x.png" />
        
 
         
           <div class= "future-temperatures">
-            73° <span class="min-temp">72°</span>
+            ${Math.round(
+              forecastDay.temp.max
+            )}° <span class="min-temp">${Math.round(
+          forecastDay.temp.min
+        )}°</span>
           </div>
         </div>
      `;
+    }
   });
 
   forecastHtml = forecastHtml + `</div>`;
