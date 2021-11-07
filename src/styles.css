@@ -78,8 +78,6 @@ a .active {
   color: #27296d;
 }
 
-}
-
 .humidity,
 .wind {
   color: #430f58;
@@ -138,7 +136,7 @@ a .active {
   font-style: italic;
   margin-left: 20px;
 }
-.max-temp{
+.max-temp {
   font-weight: bolder;
 }
 .min-temp {
