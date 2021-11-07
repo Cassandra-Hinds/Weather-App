@@ -4,7 +4,7 @@ function getForecast(coordinates) {
   let apiURLForecastEndpoint = `https://api.openweathermap.org/data/2.5/onecall`;
   let units = "imperial";
   let apiURLForecast = `${apiURLForecastEndpoint}?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
-  console.log(apiURLForecast);
+
   axios.get(apiURLForecast).then(showForecast);
 }
 function weather(response) {
