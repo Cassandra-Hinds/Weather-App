@@ -77,9 +77,7 @@ a {
 a .active {
   color: #27296d;
 }
-#fahren-link,
-#cels-link {
-  text-decoration: none;
+
 }
 
 .humidity,
@@ -139,6 +137,9 @@ a .active {
   font-size: 20px;
   font-style: italic;
   margin-left: 20px;
+}
+.max-temp{
+  font-weight: bolder;
 }
 .min-temp {
   opacity: 80%;
