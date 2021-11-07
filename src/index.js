@@ -85,21 +85,6 @@ function currentTime() {
   return `Lasted updated: ${day} ${hours}:${minutes}`;
 }
 
-function celsTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  let celsTemperature = ((fahrenTemp - 32) * 5) / 9;
-  temperatureElement.innerHTML = Math.round(celsTemperature);
-}
-
-function fahrenTemperature(event) {
-  event.preventDefault();
-
-  let temperatureElement = document.querySelector("#temperature");
-
-  temperatureElement.innerHTML = Math.round(fahrenTemp);
-}
-
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -146,13 +131,3 @@ function showForecast(response) {
 let time = document.querySelector(".day-and-time");
 
 time.innerHTML = currentTime(now);
-
-let fahrenTemp = null;
-
-let celsLink = document.querySelector("#cels-link");
-
-celsLink.addEventListener("click", celsTemperature);
-
-let fahrenLink = document.querySelector("#fahren-link");
-
-fahrenLink.addEventListener("click", fahrenTemperature);
